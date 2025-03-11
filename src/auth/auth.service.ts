@@ -12,7 +12,7 @@ import { Request, Response } from 'express';
 
 @Injectable()
 export class AuthService {
-  constructor(private prisma: PrismaService, private jwt: JwtService) {}
+  constructor(private readonly prisma: PrismaService, private readonly jwt: JwtService) {}
 
   async signup(dto: AuthDto) {
     const { email, password } = dto;
